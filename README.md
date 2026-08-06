@@ -170,3 +170,44 @@ Do **not** put custom skills in `~/.cursor/skills-cursor/` — reserved for Curs
 1. Keep a template `.cursor/` folder (rules, skills, agents) — copy from this repo's `cursor/` tree.
 2. Copy or symlink it when you create a project, or start from a boilerplate repo.
 3. For team sharing, commit `.cursor/` in the project repo; for personal defaults, use `~/.cursor/skills/` and `~/.cursor/agents/`.
+
+
+### activate/ deactivate and call the skill
+
+- Add
+    - `disable-model-invocation: true` to the yaml part of the SKILL.md file
+
+- to call the skill
+    - use the @.cursor/skills/senior-csharp-dotnet-backend/SKILL.md skill to
+
+### comments in a SKILLS.md file
+
+`SKILL.md` is YAML frontmatter + Markdown, so comments work differently in each part.
+
+**In the YAML frontmatter** (between `---` lines):
+
+```yaml
+---
+name: senior-csharp-dotnet-backend
+# This is a YAML comment
+description: ...
+disable-model-invocation: true
+---
+```
+
+**In the Markdown body**, use HTML comments (they won’t show when rendered):
+
+```markdown
+<!-- This is a comment for humans reading the skill file -->
+
+## Instructions
+...
+```
+
+Normal Markdown doesn’t have a `#` comment syntax in the body — `#` there means a heading. Use `<!-- ... -->` instead.
+
+**Note:** The agent still sees HTML comments when it reads the skill, so only use them for notes you want available in context, or keep comments out of the skill if you want to save tokens.
+
+## documentation
+
+- [https://cursor.com/docs/skills#skillmd-file-format]

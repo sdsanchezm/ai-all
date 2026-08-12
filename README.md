@@ -210,4 +210,7 @@ Normal Markdown doesn’t have a `#` comment syntax in the body — `#` there me
 
 ## documentation
 
-- [https://cursor.com/docs/skills#skillmd-file-format]
+- cursor cli install
+    - [https://cursor.com/docs/cli/installation](https://cursor.com/docs/cli/installation)
+- skill md format
+    - [https://cursor.com/docs/skills#skillmd-file-format](https://cursor.com/docs/skills#skillmd-file-format)
